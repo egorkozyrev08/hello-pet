@@ -1,0 +1,29 @@
+{
+  "name": "hello-pet",
+  "displayName": "HelloPet",
+  "description": "Shows a message by command",
+  "version": "1.0.0",
+  "publisher": "kozyrev-m3113",
+  "author": { "name": "Kozyrev Egor, group M3113" },
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:helloPet.hello"],
+  "main": "./out/extensions.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "helloPet.hello",
+        "title": "Say Hello",
+        "category": "HelloPet"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
